@@ -1,0 +1,10 @@
+/* console.log("beign")
+document.getElementById("123").addEventListener("click", () => {
+
+const utterance = new SpeechSynthesisUtterance('156')
+const lang = 'de-DE'
+
+
+utterance.lang = lang
+speechSynthesis.speak(utterance)
+})

@@ -1,0 +1,41 @@
+#numberpad {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: dodgerblue;
+    padding: 10px;
+}
+
+#numberpad>button {
+    height: 10vh;
+    background-color: #f1f1f1;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    min-width: 20vw;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#exercise-display{
+    border: 2px solid black;
+    padding: 20px;
+    font-size: 65px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+#exercise-display-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#numberpad-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

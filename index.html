@@ -1,27 +1,51 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Math Trainer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <p>Test</p>
-    <button id="123">test</button>
-    <script>
-        console.log("beign")
-        document.getElementById("123").addEventListener("click", () => {
-            /* const ut = new SpeechSynthesisUtterance('123 + 87');
-            speechSynthesis.speak(ut); */
-            const utterance = new SpeechSynthesisUtterance('156')
-            const lang = 'de-DE'
-
-            // Without the following line, voice remains in English on iOS
-            // voicesList is here the retured value of speechSynthesis.getVoices()
-            /* utterance.voice = voicesList.find((voice) => voice.lang === 'de-DE') */
-
-            utterance.lang = lang
-            speechSynthesis.speak(utterance)
-        })
-
-        console.log("end")
-    </script>
+    <div id="menu">
+        <h1>Willkommen bei <b>Mental Math!!</b></h1>
+        <p>Wähle die Art der Übung:</p>
+        <ol>
+            <li><button class="exercise-option" data-type="addition-subtraction">Mittelgroße Zahlen Addition/Subtraktion</button></li>
+            <li><button class="exercise-option" data-type="multiplication-division">Mittelgroße Zahlen Multiplikation/Division</button></li>
+            <li><button class="exercise-option" data-type="large-addition-subtraction">Große Zahlen Addition/Subtraktion</button></li>
+            <li><button class="exercise-option" data-type="large-multiplication-division">Große Zahlen Multiplikation/Division</button></li>
+            <li><button class="exercise-option" data-type="square">Quadratzahlen</button></li>
+            <li><button class="exercise-option" data-type="all">ALLES ZUSAMMEN!!! BOOM</button></li>
+        </ol>
+        <input type="checkbox" id="sound" name="sound">
+        <label for="sound">Nur mit Sprache</label><br>
+    </div>
+    
+    <div id="exercise" hidden>
+        <button id="return">Zurück zum Hauptmenü</button>
+        <p>Hier ist deine Aufgabe:</p>
+        <div id="exercise-display-box">
+            <div id="exercise-display">-</div>
+        </div>
+        <div id="numberpad-box">
+            <div id="numberpad">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>0</button>
+                <button>+/-</button>
+                <button>Del</button>
+                <button id="submit" style="grid-column: span 3;">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
-
 </html>
