@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mental Math Trainer</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="menu">
         <h1>Willkommen bei <b>Mental Math!!</b></h1>
         <p>Wähle die Art der Übung:</p>
         <ol>
-            <li><button class="exercise-option" data-type="addition-subtraction">Mittelgroße Zahlen Addition/Subtraktion</button></li>
-            <li><button class="exercise-option" data-type="multiplication-division">Mittelgroße Zahlen Multiplikation/Division</button></li>
-            <li><button class="exercise-option" data-type="large-addition-subtraction">Große Zahlen Addition/Subtraktion</button></li>
-            <li><button class="exercise-option" data-type="large-multiplication-division">Große Zahlen Multiplikation/Division</button></li>
+            <li><button class="exercise-option" data-type="addition-subtraction">Mittelgroße Zahlen
+                    Addition/Subtraktion</button></li>
+            <li><button class="exercise-option" data-type="multiplication-division">Mittelgroße Zahlen
+                    Multiplikation/Division</button></li>
+            <li><button class="exercise-option" data-type="large-addition-subtraction">Große Zahlen
+                    Addition/Subtraktion</button></li>
+            <li><button class="exercise-option" data-type="large-multiplication-division">Große Zahlen
+                    Multiplikation/Division</button></li>
             <li><button class="exercise-option" data-type="square">Quadratzahlen</button></li>
             <li><button class="exercise-option" data-type="all">ALLES ZUSAMMEN!!! BOOM</button></li>
         </ol>
         <input type="checkbox" id="sound" name="sound">
         <label for="sound">Nur mit Sprache</label><br>
     </div>
-    
+
     <div id="exercise" hidden>
-        <button id="return">Zurück zum Hauptmenü</button>
-        <p>Hier ist deine Aufgabe:</p>
         <div id="exercise-display-box">
             <div id="exercise-display">-</div>
+            <div id="exercise-input">-</div>
         </div>
         <div id="numberpad-box">
             <div id="numberpad">
@@ -45,7 +50,9 @@
                 <button id="submit" style="grid-column: span 3;">Submit</button>
             </div>
         </div>
+        <button id="return">Zurück zum Hauptmenü</button>
     </div>
     <script src="main.js"></script>
 </body>
+
 </html>

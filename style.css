@@ -20,16 +20,17 @@ button:hover{
     cursor: pointer;
 }
 
-#exercise-display{
+#exercise-display, #exercise-input{
     border: 2px solid black;
     padding: 20px;
-    font-size: 65px;
+    font-size: 60px;
     border-radius: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 5px;
 }
 
 #exercise-display-box{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -38,4 +39,8 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#return {
+    margin-top: 25px;
 }

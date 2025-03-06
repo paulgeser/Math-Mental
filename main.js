@@ -5,8 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuArea = document.getElementById("menu");
     const exerciseArea = document.getElementById("exercise");
     const exerciseDisplay = document.getElementById("exercise-display");
+    const exerciseInput = document.getElementById("exercise-input");
     const numberPad = document.getElementById("numberpad");
-    
+
     let exercises = [];
     let currentExerciseIndex = 0;
     let userInput = "";
@@ -77,8 +78,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (soundCheckbox.checked) {
             exerciseDisplay.innerHTML = "-";
             speakExercise(currentExercise);
+            exerciseInput.innerHTML = " = " + userInput;
         } else {
-            exerciseDisplay.innerHTML = currentExercise + " = " + userInput;
+            exerciseDisplay.innerHTML = currentExercise;
+            exerciseInput.innerHTML = " = " + userInput;
         }
     }
 
