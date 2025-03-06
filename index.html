@@ -1,9 +1,27 @@
 <!DOCTYPE html>
 <html>
+
 <body>
+    <p>Test</p>
+    <button id="123">test</button>
+    <script>
+        console.log("beign")
+        document.getElementById("123").addEventListener("click", () => {
+            /* const ut = new SpeechSynthesisUtterance('123 + 87');
+            speechSynthesis.speak(ut); */
+            const utterance = new SpeechSynthesisUtterance('156')
+            const lang = 'de-DE'
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+            // Without the following line, voice remains in English on iOS
+            // voicesList is here the retured value of speechSynthesis.getVoices()
+            /* utterance.voice = voicesList.find((voice) => voice.lang === 'de-DE') */
 
+            utterance.lang = lang
+            speechSynthesis.speak(utterance)
+        })
+
+        console.log("end")
+    </script>
 </body>
+
 </html>
