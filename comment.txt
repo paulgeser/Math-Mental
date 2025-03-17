@@ -7,4 +7,5 @@ const lang = 'de-DE'
 
 utterance.lang = lang
 speechSynthesis.speak(utterance)
+
 })
